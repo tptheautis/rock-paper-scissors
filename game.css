@@ -1,0 +1,15 @@
+img{
+    height: 200px;
+    width: 200px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 500px;
+    gap: 20px;
+}
+
+button{
+    border-radius: 50px;
+}
