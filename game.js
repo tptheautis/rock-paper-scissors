@@ -29,9 +29,10 @@ function playRound(playerSelection, getComputerChoice) {
         console.log('You win! Rock beats scissors')
     }
 }
-
+const computerSelection = getComputerChoice
 function game (playRound) {
     for (let i = 0; i < 5; i++)
+    console.log(playRound(playerSelection, computerSelection));
 }
 const playSelection = "rock";
 
