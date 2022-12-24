@@ -1,10 +1,8 @@
-
-
-.rock-paper-scissors{
-    font-size: 100px;
-    font-family: Impact;
-    text-align: center;
-    margin-top: 300px;
+h2{
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    color: black;
 }
 
 .buttons {
@@ -17,8 +15,19 @@
 button{
     border-radius: 50px;
     background-color: white;
-    border-style: dashed;
-    
+    border-style: solid;
+    border-color: black;
+    cursor: pointer;
+    box-shadow: 0 7px black;
+}
+
+/*BUTTON STYLING*/
+.button:hover {background-color: #D3D3D3}
+
+.button:active {
+  background-color: #D3D3D3;
+  box-shadow: 0 5px black;
+  transform: translateY(4px);
 }
 
 /* TITLE STYLING */
