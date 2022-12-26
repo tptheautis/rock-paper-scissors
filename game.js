@@ -34,5 +34,20 @@ function game (playRound) {
     for (let i = 0; i < 5; i++)
     console.log(playRound(playerSelection, computerSelection));
 }
-const playSelection = "rock";
 
+//rock-paper-scissors button functions
+
+function rock() {
+    let playerSelection = 'rock';
+    console.log('player selected rock')
+}
+
+function paper() {
+    let playerSelection = 'paper';
+    console.log('player selected paper');
+}
+
+function scissors() {
+    let playerSelection = 'scissors';
+    console.log('player selected scissors');
+}
