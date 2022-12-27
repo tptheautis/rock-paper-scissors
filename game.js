@@ -8,32 +8,32 @@ if (getComputerChoice < .33) {
     console.log('scissors');
 }
 
-if (playerSelection = 'rock') {
-    let playSelection = .33
-} else if (playerSelection = 'paper') {
-    let playSelection = .66
-} else if (playerSelection = 'scissors') {
-    let playSelection = .99
-}
-
-//declaring winner
-function playRound(playerSelection, getComputerChoice) {
-    if ((playerSelection.toLowerCase() = 'rock') & (computerSelection = 'paper')) {
-        return
-
-        console.log('You Lose! Paper beats Rock')
-        console.log('You Lose! Scissors beats paper')
-        console.log('You lose! Rock beats scissors')
-        console.log('You win! Paper beats Rock')
-        console.log('You win! Scissors beats paper')
-        console.log('You win! Rock beats scissors')
-    }
-}
-const computerSelection = getComputerChoice
+//round system
 function game (playRound) {
     for (let i = 0; i < 5; i++)
     console.log(playRound(playerSelection, computerSelection));
 }
+const computerSelection = getComputerChoice.toLowerCase;
+
+//loop
+
+function playRound(playerSelection, computerSelection) {
+    computerSelection = getComputerChoice.toLowerCase();
+    playerSelection = playerSelection.toLowerCase();
+    if (playerSelection == computerSelection) {
+        console.log('Tie!')
+    } else if (
+        (playerSelection == "rock" && computerSelection == "scissors") ||
+        (playerSelection == "paper" && computerSelection == "rock") ||
+        (playerSelection == "scissors" && computerSelection == "paper")
+    ){
+        playerScore = playerScore ++;
+    } else {
+        computerScore = playerScore ++;
+    }
+}
+//scoring
+
 
 //rock-paper-scissors button functions
 
