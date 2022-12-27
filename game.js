@@ -1,25 +1,37 @@
-//computer randomizer
-let getComputerChoice = Math.random();
-if (getComputerChoice < .33) {
-    console.log('rock');
-} else if (getComputerChoice <= .66) {
-    console.log('paper');
-} else {
-    console.log('scissors');
+//start
+let playerScore = 0;
+let computerScore = 0;
+
+var playerscored = document.querySelector('.playerscored');
+playerscored.innerHTML = playerScore;
+
+//Computer Randomizer
+function randomChoice() {
+    let randomNumber = Math.floor(Math.random() * 3)
+    switch (randomNumber) {
+        case 0:
+            return 'Rock'
+        case 1: 
+            return 'Paper'
+        case 2: 
+            return 'Scissors'
+    }
 }
 
-//round system
-function game (playRound) {
-    for (let i = 0; i < 5; i++)
-    console.log(playRound(playerSelection, computerSelection));
+//button round system
+if (playerScore == 5 || computerScore === 5) {
+    whoisthewinner();
 }
-const computerSelection = getComputerChoice.toLowerCase;
 
-//loop
-
+function whoisthewinner() {
+    if (playerScore > computerScore) {
+        console.log('You win!')
+    } else {
+        console.log('You lose!')
+    }
+}
+//if loop
 function playRound(playerSelection, computerSelection) {
-    computerSelection = getComputerChoice.toLowerCase();
-    playerSelection = playerSelection.toLowerCase();
     if (playerSelection == computerSelection) {
         console.log('Tie!')
     } else if (
@@ -50,4 +62,11 @@ function paper() {
 function scissors() {
     let playerSelection = 'scissors';
     console.log('player selected scissors');
+}
+
+//Restart
+function restart() {
+    playerScore = 0;
+    computerScore = 0;
+
 }

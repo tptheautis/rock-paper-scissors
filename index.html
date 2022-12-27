@@ -9,8 +9,7 @@
         <ling rel="stylesheet" href="game.css"/>
         <title>RockPaperScissors</title>
     </head>
-    <body> 
-       
+    <body>
         <!--Title animation-->
         <h1 class="jt --debug">
             <span class="jt__row">
@@ -33,9 +32,15 @@
             </span>
           </h1>
           <!--Scores-->
-          <h2>PLAYER SCORE:</h2>
-          <h2>COMPUTER SCORE:</h3>
-
+          <div class="score-container">
+            <div class="score-box">
+              <p class="score" id="playerScore">Player: 0</p>
+            </div>
+            <div class="score-box">
+              <p class="score" id="computerScore">Computer: 0</p>
+            </div>
+          </div>
+        <!--Buttons-->
         <div class="buttons">
             <div class="rock">
                 <button onclick="rock()" class="button"><img src="rock.png" width="150" height="150"></button>
