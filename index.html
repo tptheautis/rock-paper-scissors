@@ -4,7 +4,6 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="game.css">
-        <link rel="stylesheet" href="startscreen.css">
         <script src="game.js"></script>
         <ling rel="stylesheet" href="game.css"/>
         <title>RockPaperScissors</title>
@@ -43,13 +42,13 @@
         <!--Buttons-->
         <div class="buttons">
             <div class="rock">
-                <button onclick="rock()" class="button"><img src="rock.png" width="150" height="150"></button>
+                <button class="button" id="rockBtn"> <img src="rock.png" width="150" height="150"></button>
             </div>
             <div class="paper">
-                <button onclick="paper()" class="button"><img src="paper.png" width="150" height="150"></button>
+                <button class="button" id="paperBtn"><img src="paper.png" width="150" height="150"></button>
             </div>
             <div class="scissors">
-                <button onclick="scissors()" class="button"><img src="scissors.png" width="150" height="150"></button>
+                <button class="button" id="scissorsBtn"><img src="scissors.png" width="150" height="150"></button>
             </div>
         </div>
     </body>
