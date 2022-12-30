@@ -6,11 +6,13 @@ console.log(playerScore);
 console.log(computerScore);
 //UI
 
-//playerselection
+//playerSelection
 window.onload=function() {
     const rockBtn = document.getElementById('rockBtn');
     const paperBtn = document.getElementById('paperBtn');
     const scissorsBtn = document.getElementById('scissorsBtn');
+    const playerScoreDoc = document.getElementById('playerScore');
+    const computerScoreDoc = document.getElementById('computerScore');
 
     rockBtn.addEventListener('click', () => btn('rock'));
     paperBtn.addEventListener('click', () => btn('paper'));
@@ -21,12 +23,15 @@ window.onload=function() {
         playRound(playerSelection, computerSelection);
         updateChoices(playerSelection, computerSelection);
     }
-
-    function updateChoices(playerSelection, computerSelection) {
-
-    }
 }
-//Computer Choice Randomizer
+
+//updates
+function updateChoices(playerSelection, computerSelection) {
+    document.getElementById('playerScore').innerHTML = `Player: ${playerScore}`;
+    document.getElementById('computerScore').innerHTML = `Computer: ${computerScore}`;
+}
+
+//computerSelection
 function randomChoice() {
     let random = Math.floor(Math.random() * 3);
     switch (random) {
@@ -50,7 +55,7 @@ function playRound(playerSelection, computerSelection) {
     {    
         playerScore++;
         winner = 'player'
-        console.log('player won')
+        console.log('You won that round!')
 
     } else if(
         (playerSelection === 'rock' && computerSelection === 'paper') ||
@@ -59,20 +64,19 @@ function playRound(playerSelection, computerSelection) {
     {
         computerScore++;
         winner = 'computer'
-        console.log('computer won')
+        console.log('Computer won that round!')
     
     }
+    playGame();
 }
 
 function playGame() {
     if (playerScore == 5) {
-        playerScore = 0;
-        computerScore = 0;
-        console.log('You win the game!')
+        console.log('You won the game!')
+        restart();
     } else if (computerScore == 5) {
-        playerScore = 0;
-        computerSCore = 0;
-        console.log('you lose')
+        console.log('You lost the game!')
+        restart();
     }
 }
 
@@ -80,4 +84,6 @@ function playGame() {
 function restart() {
     playerScore = 0;
     computerScore = 0;
+    console.log(playerScore);
+    console.log(computerScore);
 }
